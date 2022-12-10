@@ -1,0 +1,961 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=DM+Sans:wght@400;500;700&family=Roboto+Slab:wght@300&display=swap');
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+
+ 
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+ 
+  /*========== Font weight ==========*/
+  
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+@media screen and (min-width: 1024px) {
+  :root {
+    --biggest-font-size: 4rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  transition: background 0.4s; /* for dark mode animation */
+}
+
+h1, h2, h3 {
+  font-family: 'Bree Serif', serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== THEME ===============*/
+
+
+/*========== Variables Dark theme ==========*/
+
+
+/*========== 
+    Color changes in some parts of 
+    the website, in light theme
+==========*/
+
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 1024px;
+  margin-inline: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section {
+  padding-block: 5rem 1rem;
+}
+
+.main {
+  overflow: hidden; /* For animation ScrollReveal */
+}
+
+/*=============== HEADER & NAV ===============*/
+.header{
+  position: fixed;
+  width: 100%;
+  background: transparent;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #fff;
+}
+
+.nav{
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__close,
+.nav__toggle{
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px){
+  .nav__menu{
+    position: fixed;
+    top: -100%;
+    left: 0;
+    background-color: #F9FAFC;
+    width: 100%;
+    box-shadow: 0 8px 20px hsla(19, 64%, 24%, .1);
+    padding-block: 3.5rem;
+    transition: top .4s;
+  }
+}
+
+.nav__list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2rem;
+}
+
+.nav__link{
+  color: #0F2137;
+  font-size: 1.5rem;
+  font-weight: 500;
+  transition: .3s;
+}
+.nav__link:hover{
+  color: #F94962;
+  border-bottom: 1px solid #F94962;
+}
+
+
+.nav__close{
+  position: absolute;
+  top: .9rem;
+  right: 0;
+  cursor: pointer;
+}
+
+/* Show menu */
+.show-menu{
+  top: 0;
+}
+
+/* Change background header */
+
+
+/* Active link */
+
+
+/*=============== HOME ===============*/
+.home__container{
+  position: relative;
+  row-gap: 2.5rem;
+}
+
+.home__img{
+  width: 330px;
+}
+
+.home__data{
+  text-align: center;
+}
+
+.home__title{
+  color: #02073E;
+  font-size: 1.7rem;
+  font-weight: 400;
+  padding-bottom: 2rem;
+}
+
+.home__description{
+  color: #02073E;
+  font-size: 1rem;
+  font-weight: 400;
+  padding-bottom: 2rem;
+}
+
+.home__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.home__form input{
+  padding: .7rem 1rem;
+  border-radius: .3rem;
+  font-size: 1rem;
+  border: 1px solid #D4DAE2;
+}
+
+.home__form button{
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  padding: .7rem 1rem;
+  border: none;
+  border-radius: .3rem;
+  color: #fff;
+  font-size: 1rem;
+  background-color: #F94962;
+}
+
+.home__form:hover button{
+  box-shadow: 2px 2px 5px 2px rgba(226, 11, 29, 0.445);
+}
+
+.home__sponsored{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: .7rem;
+  color: #B7BEC9;
+  font-size: .5;
+}
+
+.home__sponsored span{
+  padding-right: 1rem;
+}
+.home__link{
+  color: #B7BEC9;
+  font-size: 1.5rem;
+}
+
+.home__link i{
+  transition: .3s;
+}
+
+.home__link:hover i{
+  color: #F94962;
+  /* Добавь движения кнопкам */
+}
+/*=============== BUTTON ===============*/
+
+
+/*=============== ADVANTAGES ===============*/
+.advantages__container{
+  position: relative;
+  text-align: center;
+}
+
+.advantages__title{
+  color: #0F2137;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.advantages__description{
+  color: #0F2137;
+  font-size: .8rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.advantages__container div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.advantages__card img{
+  width: 50px;
+}
+
+.advantages__card h3{
+  font-family: 'DM Sans', sans-serif;
+  font-size: .85rem;
+  font-weight: 500;
+  margin-bottom: .5rem;
+}
+
+.advantages__card p{
+  font-weight: 400;
+  font-size: .8rem;
+  margin-bottom: 1rem;
+}
+/*=============== SUPPORT ===============*/
+
+.support__container{
+  padding-top: 6rem;
+  padding-bottom: 5rem;
+  position: relative;
+  text-align: center;
+  background-color: #F9FAFC;
+  row-gap: 2rem;
+}
+
+.support__img{
+  width: 330px;
+}
+
+.support__title{
+  color: #0F2137;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.support__description{
+  color: #02073E;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.support__check{
+  margin-bottom: 1.5rem;
+}
+
+.support__check p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.support__check i{
+  color: #fff;
+  margin-right: .5rem;
+  background-color: #3FDBB1;
+  border-radius: 1rem;
+}
+
+.support__link{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  color: #3183FF;
+}
+
+.ri-arrow-right-s-line{
+  position: relative;
+  top: 2px;
+  left: 5px;
+  color: #4F96FF;
+}
+/*=============== SUPPORT-2 ===============*/
+.support2__container{
+  position: relative;
+  text-align: center;
+  row-gap: 2rem;
+}
+
+.support2__img{
+  width: 330px;
+}
+
+.support2__title{
+  color: #0F2137;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.support2__description{
+  color: #02073E;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.support2__link{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  color: #3183FF;
+}
+
+.ri-arrow-right-s-line{
+  position: relative;
+  top: 2px;
+  left: 5px;
+  color: #4F96FF;
+}
+
+/*=============== USERS ===============*/
+.users__container{
+  position: relative;
+  text-align: center;
+}
+
+.users__title{
+  color: #0F2137;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.users__description{
+  color: #0F2137;
+  font-size: 1rem;
+}
+
+
+/*=============== ADVANTAGES-2 ===============*/
+
+.advantages2__container{
+  padding-top: 6rem;
+  padding-bottom: 5rem;
+  position: relative;
+  text-align: center;
+  background-color: #F9FAFC;
+  row-gap: 2rem;
+}
+
+.advantages2__title{
+  color: #0F2137;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.advantages2__description{
+  color: #0F2137;
+  font-size: .8rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.advantages2__container div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.advantages2__card img{
+  width: 50px;
+  
+}
+
+.advantages2__card h3{
+  font-family: 'DM Sans', sans-serif;
+  font-size: .85rem;
+  font-weight: 500;
+  margin-bottom: .5rem;
+}
+
+.advantages2__card p{
+  font-size: .8rem;
+  margin-bottom: 1rem;
+}
+
+/*=============== TEAMS ===============*/
+.teams__container{
+  position: relative;
+  text-align: center;
+}
+
+.teams__title{
+  font-family: 'Bree Serif', serif;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.teams__description{
+  font-size: .8rem;
+}
+
+.teams__question{
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  background-color: #183656;
+  padding: 2rem;
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.teams__question span{
+  font-family: 'Bree Serif', serif;
+  color: #fff;
+  font-weight: 400;
+}
+
+.teams__question button{
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: .3rem;
+  border: none;
+  font-weight: 700;
+  color: #183656;
+}
+
+.teams__question img{
+  position: absolute;
+  opacity: 0;
+}
+/*=============== FOOTER ===============*/
+.footer{
+  position: relative;
+  padding-block: 3rem 2rem;
+  overflow: hidden;
+}
+
+.footer__container{
+  row-gap: 3rem;
+}
+
+.footer__logo img{
+  width: 150px;
+}
+
+.footer__content,
+.footer__link{
+  display: grid;
+}
+
+.footer__content{
+  grid-template-columns: repeat(2,max-content);
+  gap:1rem;
+}
+
+.footer__title{
+  font-size: var(--h3-font-size);
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: #0F2137;
+}
+
+.footer__links{
+  row-gap: .5rem;
+}
+
+.footer__link{
+  margin-bottom: .3rem;
+  color: #02073E;
+  transition: .3s;
+}
+
+.footer__link:hover{
+  color: #F94962;
+}
+
+.footer__social{
+  display: flex;
+  flex-direction: column;
+  
+  row-gap: .2rem;
+}
+
+.footer__social-link{
+  color: #02073E;
+  font-size: 1rem;
+  transition: .3s, .3s;
+}
+
+.footer__social-link img{
+  width: 20px;
+  height: 14px;
+}
+
+.footer__social-link:hover{
+  color: #F94962;
+}
+
+.footer__copy{
+  text-align: left;
+  font-size: .7rem;
+  color: #0F2137;
+}
+/*=============== SCROLL BAR ===============*/
+
+
+/*=============== SCROLL UP ===============*/
+
+
+/* Show Scroll Up*/
+
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 340px){
+  
+  .container{
+    margin-inline: 1rem;
+  }
+
+  .section{
+    padding-block:4rem 1rem;
+  }
+
+  .home__img{
+    width: 250px;
+  }
+
+  .support__img{
+    width: 260px;
+  }
+
+  .support2__img{
+    width: 235px;
+  }
+
+  .support__check i{
+    margin-right: .1rem;
+  }
+
+  .footer__title{
+    font-size: .9rem;
+  }
+
+  .footer__link{
+    font-size: .8rem;
+  }
+
+  .footer__social{
+    row-gap: 0;
+  }
+
+  .footer__social-link{
+    font-size: .8rem;
+    row-gap: 0;
+  }
+}
+/* For medium devices */
+@media screen and (min-width: 540px) {
+  .home__container,
+  .advantages__container,
+  .support__container,
+  .support2__container,
+  .users__container,
+  .advantages2__container,
+  .teams__container{
+    display: grid;
+    grid-template-columns: .7fr;
+    justify-content: center;
+  }
+
+  .footer__content{
+    grid-template-columns: repeat(3, max-content);
+    column-gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 767px){
+  .nav{
+    column-gap: 3rem;
+  }
+  .nav__toggle,
+  .nav__close{
+    display: none;
+  }
+  .nav__list{
+    flex-direction: row;
+    column-gap: 3rem;
+  }
+  .nav__link{
+    font-size: 1rem;
+  }
+  .nav__menu{
+    margin-left: auto;
+  }
+
+  .home__img{
+    width: initial;
+  }
+  .home__description{
+    line-height: 1.5rem;
+  }
+  .home__form{
+    flex-direction: row;
+    column-gap: 1rem;
+  }
+
+  .advantages__description{
+    padding: 0 7rem;
+    line-height: 1.5rem;
+  }
+  .advantages__container div{
+    display: grid;
+    grid-template-columns: repeat(3,230px);
+    column-gap: .6rem;
+  }
+
+  .support__img{
+    width: initial;
+  }
+
+  .support2__img{
+    width: initial;
+  }
+  
+  .advantages2__description{
+    padding: 0 7rem;
+  }
+
+  .advantages2__container div{
+    display: grid;
+    grid-template-columns: repeat(3,230px);
+    column-gap: .6rem;
+  }
+
+  .section__span{
+   text-align: left;
+   width: 300px;
+   font-size: 1.5rem;
+  }
+
+  .teams__title{
+    padding: 0 3.1rem;
+    line-height: 2rem;
+  }
+
+  .teams__question{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .teams__question img{
+    position: relative;
+    right: 20px;
+    width: 150px;
+    opacity: 1;
+  }
+
+  .footer__content{
+    grid-template-columns: repeat(4, max-content);
+    justify-content: space-around;
+  }
+}
+/* For large devices */
+@media screen and (min-width: 1024px){
+  .section{
+    padding-block:1rem 1.5rem ;
+  }
+
+  .nav{
+    height: calc(var(--header-height) + 1.5rem);
+  }
+  .nav__logo{
+    width: 250px;
+  }
+  .nav__link{
+    font-size: 1.5rem;
+  }
+
+  .home__container{
+    position: relative;
+    grid-template-columns: 450px 500px;
+    padding-block: 7rem 3rem;
+    column-gap: 2rem;
+  }
+  .home__data{
+    text-align: initial;
+    order: -1;
+  }
+  .home__title{
+    font-size: 3rem;
+  }
+  .home__img{
+    height: 100%;
+  }
+  .home__description{
+    font-size: 1.2;
+    line-height: 2.5rem;
+  }
+  .home__form{
+    justify-content: initial;
+    margin-bottom: 2rem;
+  }
+  .home__form input{
+    padding: 1rem 4rem 1rem 1rem ;
+  }
+  .home__form button{
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+  .home__sponsored{
+    font-size: 1.5rem;
+    justify-content: initial;
+    column-gap: 1rem;
+  }
+  .home__sponsored i{
+    font-size: 2rem;
+  }
+
+
+  .advantages__title{
+    font-size: 1.5rem;
+  }
+  .advantages__description{
+    padding: 0 12rem;
+    line-height: 2rem;
+  }
+  .advantages__card{
+    display: grid;
+    grid-template-columns: 50px 240px;
+    column-gap: 1rem;
+    text-align: left;
+  }
+
+  .advantages__card img{
+    grid-row: 1/3;
+  }
+  .advantages__card p{
+    line-height: 1.5rem;
+    grid-column: 2/2;
+  }
+  .advantages__card h3{
+    font-size: 1rem;
+    align-self: center;
+  }
+  .advantages__container div{
+    grid-template-columns: repeat(3,260px);
+    column-gap: 5rem;
+  }
+
+  .support__container{
+    position: relative;
+    grid-template-columns: 550px 400px;
+    padding-block: 7rem 3rem;
+    column-gap: 3rem;
+  }
+  .support__data{
+    align-self:center;
+    text-align: left;
+  }
+  .support__title{
+    line-height: 3rem;
+    font-size: 2rem;
+  }
+  .support__description{
+    margin-bottom: 2rem;
+    line-height: 2.5rem;
+  }
+  .support__check p{
+    justify-content: start;
+    margin-bottom: 1rem;
+  }
+  .support__link{
+    margin-top: 2rem;
+    justify-content: start;
+  }
+  
+  .support2__container{
+    position: relative;
+    grid-template-columns: 400px 450px;
+    padding-block: 7rem 3rem;
+    column-gap: 5rem;
+  }
+  
+  .support2__data{
+    align-self:center;
+    order: -1;
+    text-align: left;
+  }
+  .support2__title{
+    line-height: 3rem;
+    font-size: 2rem;
+  }
+  .support2__description{
+    margin-bottom: 2rem;
+    line-height: 2.5rem;
+  }
+  .support2__link{
+    margin-top: 2rem;
+    justify-content: start;
+  }
+  
+  .users__title{
+    font-size: 2rem;
+    line-height: 3rem;
+    padding: 0 5rem;
+  }
+  .users__description{
+    padding: 0 5rem;
+    line-height: 2rem;
+    margin-bottom: 6rem;
+  }
+  
+  
+  .advantages2__title{
+    font-size: 2rem;
+  }
+  .advantages2__description{
+    padding: 0 12rem;
+    line-height: 2rem;
+  }
+  .advantages2__card{
+    display: grid;
+    grid-template-columns: 50px 240px;
+    column-gap: 1rem;
+    text-align: left;
+  }
+  .advantages2__card img{
+    width: 50px;
+    grid-row: 1/3;
+  }
+  .advantages2__card p{
+    grid-column: 2/2;
+  }
+  .advantages2__card h3{
+    font-size: 1rem;
+    align-self: center;
+  }
+  .advantages2__container div{
+    column-gap: 5rem;
+  }
+
+  .teams__title{
+    font-size: 2rem;
+    padding: 0 3rem;
+    line-height: 3rem;
+  }
+  .teams__description{
+    padding: 0 7rem;
+    line-height: 2rem;
+  }
+  .teams__question span{
+    width: 350px;
+    line-height: 3rem;
+  }
+  .teams__question img{
+    width: 220px;
+  }
+}
+
+@media screen and (min-width: 1064px){
+  .container{
+    margin-inline: auto;
+  }
+
+  .advantages2__card{
+    display: grid;
+    grid-template-columns: 50px 240px;
+    column-gap: 1rem;
+    text-align: left;
+  }
+}
